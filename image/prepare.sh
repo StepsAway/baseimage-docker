@@ -38,6 +38,15 @@ $minimal_apt_get_install apt-transport-https ca-certificates
 ## Install add-apt-repository
 $minimal_apt_get_install software-properties-common
 
+## Install curl to pull apt-key
+$minimal_apt_get_install curl
+
+## Offical PostgreSQL repos
+echo 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' > /etc/apt/sources.list.d/pgdg.list
+curl --silent https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+apt-key update
+apt-get update
+
 ## Upgrade all packages.
 apt-get dist-upgrade -y --no-install-recommends
 

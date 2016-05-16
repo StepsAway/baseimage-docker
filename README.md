@@ -1,6 +1,6 @@
 # A minimal Ubuntu base image modified for Docker-friendliness
 
-[![](https://badge.imagelayers.io/phusion/baseimage:0.9.17.svg)](https://imagelayers.io/?images=phusion/baseimage:latest 'Get your own badge on imagelayers.io')
+Stepsaway/baseimage is a docker image based off of Phusion's baseimage-docker, but has been modified for the requirements of StepsAway.
 
 Baseimage-docker is a special [Docker](https://www.docker.com) image that is configured for correct use within Docker containers. It is Ubuntu, plus:
 
@@ -10,13 +10,13 @@ Baseimage-docker is a special [Docker](https://www.docker.com) image that is con
 
 You can use it as a base for your own Docker images.
 
-Baseimage-docker is available for pulling from [the Docker registry](https://registry.hub.docker.com/u/phusion/baseimage/)!
+Stepsaway Baseimage-docker is available for pulling from [the Docker registry](https://registry.hub.docker.com/u/stepsaway/baseimage/)!
 
 ### What are the problems with the stock Ubuntu base image?
 
 Ubuntu is not designed to be run inside Docker. Its init system, Upstart, assumes that it's running on either real hardware or virtualized hardware, but not inside a Docker container. But inside a container you don't want a full system anyway, you want a minimal system. But configuring that minimal system for use within a container has many strange corner cases that are hard to get right if you are not intimately familiar with the Unix system model. This can cause a lot of strange problems.
 
-Baseimage-docker gets everything right. The "Contents" section describes all the things that it modifies.
+The "Contents" section describes all the things that it modifies.
 
 <a name="why_use"></a>
 ### Why use baseimage-docker?
@@ -31,9 +31,8 @@ You can configure the stock `ubuntu` image yourself from your Dockerfile, so why
 -----------------------------------------
 
 **Related resources**:
-  [Website](http://phusion.github.io/baseimage-docker/) |
-  [Github](https://github.com/phusion/baseimage-docker) |
-  [Docker registry](https://index.docker.io/u/phusion/baseimage/) |
+  [Github](https://github.com/stepsaway/baseimage-docker) |
+  [Docker registry](https://index.docker.io/u/stepsaway/baseimage/) |
   [Discussion forum](https://groups.google.com/d/forum/passenger-docker) |
   [Twitter](https://twitter.com/phusion_nl) |
   [Blog](http://blog.phusion.nl/)
@@ -79,7 +78,6 @@ You can configure the stock `ubuntu` image yourself from your Dockerfile, so why
 <a name="whats_inside_overview"></a>
 ### Overview
 
-*Looking for a more complete base image, one that is ideal for Ruby, Python, Node.js and Meteor web apps? Take a look at [passenger-docker](https://github.com/phusion/passenger-docker).*
 
 | Component        | Why is it included? / Remarks |
 | ---------------- | ------------------- |

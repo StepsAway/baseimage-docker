@@ -1,11 +1,7 @@
 FROM ubuntu:14.04
-MAINTAINER Phusion <info@phusion.nl>
+MAINTAINER StepsAway <devgru@stepsaway.com>
 
-ADD . /bd_build
-
-RUN /bd_build/prepare.sh && \
-	/bd_build/system_services.sh && \
-	/bd_build/utilities.sh && \
-	/bd_build/cleanup.sh
+COPY . /bd_build
+RUN /bd_build/install.sh
 
 CMD ["/sbin/my_init"]
