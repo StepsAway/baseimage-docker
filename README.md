@@ -1,5 +1,7 @@
 # A minimal Ubuntu base image modified for Docker-friendliness
 
+[![](https://imagelayers.io/badge/stepsaway/baseimage:latest.svg)](https://imagelayers.io/?images=stepsaway/baseimage:latest 'Get your own badge on imagelayers.io')
+
 Stepsaway/baseimage is a docker image based off of Phusion's baseimage-docker, but has been modified for the requirements of StepsAway.
 
 Baseimage-docker is a special [Docker](https://www.docker.com) image that is configured for correct use within Docker containers. It is Ubuntu, plus:
