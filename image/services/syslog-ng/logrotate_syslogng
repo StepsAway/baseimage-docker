@@ -1,6 +1,6 @@
 /var/log/syslog
 {
-	rotate 7
+	rotate 1
 	daily
 	missingok
 	notifempty
@@ -24,8 +24,8 @@
 /var/log/debug
 /var/log/messages
 {
-	rotate 4
-	weekly
+	rotate 2
+	size 256M
 	missingok
 	notifempty
 	compress
