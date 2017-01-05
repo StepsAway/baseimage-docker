@@ -1,0 +1,12 @@
+#!/bin/bash
+exec tail -F -n 0 /var/log/cron.log |
+while read a; do echo "$a" |
+awk '{
+    split($5,a,"["); split(a[2],pid,"]:");
+  }
+  END{
+    printf "[cron %s] ", pid[1];
+    for(i=6; i<NF; i++) printf "%s",$i OFS; if(NF) printf "%s", $NF; printf ORS;
+  }' |
+logger -t cron -p local6.info;
+done

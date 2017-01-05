@@ -1,6 +1,6 @@
 NAME = stepsaway/baseimage
 # Based on phussion/baseimage-docker
-VERSION = 1.0.2
+VERSION = 1.0.3.rc1
 
 .PHONY: build test tag_latest release
 
