@@ -38,7 +38,7 @@ $minimal_apt_get_install curl
 
 ## Offical PostgreSQL repos
 echo 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' > /etc/apt/sources.list.d/pgdg.list
-curl --silent https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+curl --silent https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 apt-key update
 apt-get update
 
@@ -51,3 +51,7 @@ locale-gen en_US
 update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 echo -n en_US.UTF-8 > /etc/container_environment/LANG
 echo -n en_US.UTF-8 > /etc/container_environment/LC_CTYPE
+
+# Add custom bashrc to support rancher environments
+cp /bd_build/bashrc /etc/skel/.bashrc
+cp /bd_build/bashrc /root/.bashrc
