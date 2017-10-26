@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER StepsAway <infra-ops@stepsaway.com>
+LABEL maintainer="StepsAway <infra-ops@stepsaway.com>"
 
 COPY . /bd_build
 
